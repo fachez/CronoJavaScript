@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<htmL>
+<head>
+	<title>Cronómetro y cuenta atrás - JavaScript</title>
+	<script src="js/main.js"></script>
+	<link rel="stylesheet" href="css/styles.css">
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	
+<div>
+	<h1 class="chronometerTitle">Cronómetro</h1><br><br>
+	<p id="txtseconds">00:00:00</p><br><br>
+	<button onClick="chronometer.start()">Start chronometer</button>
+	<button onClick="chronometer.stop()">Stop chronometer</button>
+	<button onClick="chronometer.reset()">Reset chronometer</button><br><br><br><br>
+
+	<h1>Cuenta atrás</h1><br><br>
+	<p id="txtcountdown">00:00:00</p><br><br>
+
+	Hours: <input type="text" size="10" id="inputHours"> Minutes: <input type="text" size="10" id="inputMinutes"> Seconds: <input type="text" size="10" id="inputSeconds"><br><br>
+
+	<button id="startCountdown">Start countdown</button>
+	<button onClick="countdowntimer.stop()">Stop countdown</button>
+	<button onClick="countdowntimer.reset()">Reset countdown</button>
+</div>
+	<script>
+	document.getElementById("startCountdown").onclick = function() {
+		var countdownHours = document.getElementById("inputHours").value;
+		var countdownMinutes = document.getElementById("inputMinutes").value;
+		var countdownSeconds = document.getElementById("inputSeconds").value;
+
+		countdowntimer.set(countdownHours, countdownMinutes, countdownSeconds);
+		
+		
+	};
+	</script>
+</body>
+</htmL>
